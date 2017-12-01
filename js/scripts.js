@@ -95,7 +95,7 @@ function checkRoundWinner(playerPick, computerPick) {
         playerResultElem.innerHTML = "Win!";
         player.score++;
         console.log(player.score);
-        playerPointsElem.innerHTML = player.score;
+        playerPointsElem.innerText = player.score; 
     } else if (winnerIs == 'computer') {
         computerResultElem.innerText = "Win!";
         computer.score++;
