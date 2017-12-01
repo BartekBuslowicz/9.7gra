@@ -104,7 +104,7 @@ function checkRoundWinner(playerPick, computerPick) {
     }
     if (player.score == 10) {
     	console.log('player wygral');
-    	alert('Wygrał: ' + player.name + '!!!!!');
+    	alert('Wygrał: ' + player.name + '!!!');
     	player.score = computer.score = 0;
 	    gameState = 'ended';
 	    setGameElements();
