@@ -94,11 +94,27 @@ function checkRoundWinner(playerPick, computerPick) {
     if (winnerIs == 'player') {
         playerResultElem.innerHTML = "Win!";
         player.score++;
+        console.log(player.score);
+        playerPointsElem.innerHTML = player.score;
     } else if (winnerIs == 'computer') {
-        computerResultElem.innerHTML = "Win!";
+        computerResultElem.innerText = "Win!";
         computer.score++;
+        console.log(computer.score);
+        computerPointsElem.innerText = computer.score;
     }
-
+    if (player.score == 10) {
+    	console.log('player wygral');
+    	alert('Wygrał: ' + player.name + '!!!!!');
+    	player.score = computer.score = 0;
+	    gameState = 'ended';
+	    setGameElements();
+    } else if (computer.score == 10) {
+    	console.log('komputer wygral');
+    	alert('Oszukańczy komputer wygrał!!!');
+    	player.score = computer.score = 0;
+	    gameState = 'ended';
+	    setGameElements();
+    }
 }
 
 function playerPick(playerPick) {
